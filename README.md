@@ -3,6 +3,9 @@
 Website for the 8th Workshop on African Natural Language Processing, accepted as a
 one-day hybrid workshop at EACL 2027 in Athens, Greece (9-14 March 2027).
 
+Repo: https://github.com/AfricaNLP/2027 (private during review)
+Pages URL once public: https://africanlp.github.io/2027/
+
 Plain static HTML. No build step, no dependencies, no JavaScript. Edit a file,
 commit, and GitHub Pages republishes.
 

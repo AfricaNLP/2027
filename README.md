@@ -35,9 +35,8 @@ Shared files: `styles.css`, `assets/band.webp` (the header frieze),
 - **News**: add a row to the table at the top of `index.html`, newest first.
 - **Committee**: add `<li>Name, Affiliation</li>` to the list in `committee.html`.
 - **Organizer photos**: `assets/people/` holds one 400x400 JPG per organizer, reused
-  from the AfricaNLP 2026 site where the same people published them. Seid Muhie Yimam
-  was not on that site and still has an initials placeholder (`.svg`); drop in
-  `seid-muhie-yimam.jpg` and change the `src` in `organizers.html` to replace it.
+  from the AfricaNLP 2026 site, except Seid Muhie Yimam, whose photo is his GitHub
+  profile picture. To replace any of them, overwrite the file keeping the same name.
 - **Adding a page**: copy an existing file, change the title and body, then add the
   link to the `<p class="nav">` block in every page. The nav is duplicated in each
   file on purpose, so that the site needs no build tooling.

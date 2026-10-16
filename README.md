@@ -22,7 +22,8 @@ commit, and GitHub Pages republishes.
 | `sponsors.html` | Sponsors |
 | `contact.html` | Contact |
 
-Shared files: `styles.css`, `assets/band.webp` (the header frieze), `favicon.svg`.
+Shared files: `styles.css`, `assets/band.webp` (the header frieze),
+`assets/fonts/` (Exo 2), `favicon.svg`.
 
 ## Editing
 
@@ -42,6 +43,10 @@ Shared files: `styles.css`, `assets/band.webp` (the header frieze), `favicon.svg
 Then open http://127.0.0.1:4027
 
 ## Credits
+
+Typeface: Exo 2 by Natanael Gama, SIL Open Font License 1.1. Self-hosted in
+`assets/fonts/` (latin and latin-ext subsets) so the site loads no third-party
+resources and sends no requests to Google.
 
 Header frieze cropped from a flat African pattern illustration. Confirm the licence
 terms of the source and add attribution here before publishing if it requires it.

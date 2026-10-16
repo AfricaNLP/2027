@@ -13,7 +13,8 @@ commit, and GitHub Pages republishes.
 
 | File | Page |
 | --- | --- |
-| `index.html` | Home: news, about, at a glance, previous editions |
+| `home.html` | Home: news, about, at a glance, previous editions |
+| `index.html` | Redirect to `home`, so the bare directory URL works |
 | `cfp.html` | Call for papers |
 | `dates.html` | Important dates |
 | `speakers.html` | Invited speakers |
@@ -41,9 +42,12 @@ Shared files: `styles.css`, `assets/band.webp` (the header frieze),
 
 ## Local preview
 
-    python3 -m http.server 4027
+    python3 serve.py
 
 Then open http://127.0.0.1:4027
+
+`serve.py` resolves `/cfp` to `cfp.html`, which is what GitHub Pages does. Plain
+`python3 -m http.server` will 404 on the extensionless links.
 
 ## Credits
 

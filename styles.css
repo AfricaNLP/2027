@@ -144,17 +144,16 @@ a:visited { color: #0b4ea2; }
 }
 .nav a, .nav b {
   padding: .4rem 0 .45rem;
-  margin-bottom: -2px;
   color: #000000;
   text-decoration: none;
   white-space: nowrap;
-  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
 }
 .nav a:visited { color: #000000; }
-.nav a:hover { border-bottom-color: #dddddd; }
+.nav a:hover { border-top-color: #dddddd; }
 .nav b {
   font-weight: bold;
-  border-bottom-color: #c9892a;
+  border-top-color: #c9892a;
 }
 
 h1 { margin-top: 0; }

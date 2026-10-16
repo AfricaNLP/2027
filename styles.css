@@ -33,7 +33,7 @@ body {
 }
 
 .page {
-  max-width: 54rem;
+  max-width: 64rem;
   margin: 0 auto;
   padding: 1.8rem 1.2rem 3rem;
 }
@@ -98,6 +98,12 @@ h3 {
 }
 
 p, ul, table { margin: 0 0 1rem; }
+
+/* the page is wide enough for the menu; prose stays readable */
+.page p,
+.news,
+.dates,
+.page ul:not(.pc):not(.folk) { max-width: 54rem; }
 
 ul { padding-left: 1.3rem; }
 li { margin-bottom: .2rem; }
@@ -224,7 +230,7 @@ hr {
 
 .foot { font-size: .88rem; color: #555555; }
 
-@media (max-width: 760px) {
+@media (max-width: 1009px) {
   .mh {
     position: relative;
     align-items: flex-start;

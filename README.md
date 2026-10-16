@@ -23,6 +23,7 @@ commit, and GitHub Pages republishes.
 | `attending.html` | Registration, visas, joining remotely |
 | `organizers.html` | Organizers |
 | `committee.html` | Programme committee |
+| `volunteers.html` | Student volunteers |
 | `sponsors.html` | Sponsors |
 | `contact.html` | Contact |
 

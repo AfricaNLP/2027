@@ -27,7 +27,7 @@ commit, and GitHub Pages republishes.
 | `contact.html` | Contact |
 
 Shared files: `styles.css`, `assets/band.webp` (the header frieze),
-`assets/fonts/` (Exo 2), `favicon.svg`.
+`assets/people/` (organizer photos), `assets/logo.webp`, `favicon.png`.
 
 ## Editing
 
@@ -53,10 +53,6 @@ Then open http://127.0.0.1:4027
 `python3 -m http.server` will 404 on the extensionless links.
 
 ## Credits
-
-Typeface: Exo 2 by Natanael Gama, SIL Open Font License 1.1. Self-hosted in
-`assets/fonts/` (latin and latin-ext subsets) so the site loads no third-party
-resources and sends no requests to Google.
 
 Logo and favicon: the Africa panel cropped from the same pattern illustration.
 Organizer photographs: reused from the AfricaNLP 2026 workshop site.

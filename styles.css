@@ -33,7 +33,7 @@ body {
 }
 
 .page {
-  max-width: 64rem;
+  max-width: 69rem;
   margin: 0 auto;
   padding: 1.8rem 1.2rem 3rem;
 }
@@ -133,9 +133,10 @@ a:visited { color: #0b4ea2; }
 .menuwrap { flex: 1 1 100%; }
 
 .nav {
+  margin-left: -.6rem;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 1.5rem;
+  column-gap: .4rem;
   margin: 0 0 1.8rem;
   padding-top: .7rem;
   padding-bottom: .55rem;
@@ -143,18 +144,28 @@ a:visited { color: #0b4ea2; }
   font-size: .95rem;
 }
 .nav a, .nav b {
-  padding: .4rem 0 .45rem;
+  display: inline-grid;
+  padding: .4rem .6rem .45rem;
   color: #000000;
   text-decoration: none;
   white-space: nowrap;
-  border-top: 3px solid transparent;
+  font-weight: normal;
+}
+.nav a > span, .nav b > span { grid-area: 1 / 1; }
+/* hidden bold copy reserves the bold width, so nothing shifts */
+.nav a::after, .nav b::after {
+  content: attr(data-t);
+  grid-area: 1 / 1;
+  font-weight: bold;
+  visibility: hidden;
+  height: 0;
 }
 .nav a:visited { color: #000000; }
-.nav a:hover { border-top-color: #dddddd; }
+.nav a:hover { background: #f1f1f1; }
 .nav b {
-  font-weight: normal;
-  border-top-color: #c9892a;
+  background: #e7e7e7;
 }
+.nav b > span { font-weight: bold; }
 
 h1 { margin-top: 0; }
 
@@ -229,7 +240,7 @@ hr {
 
 .foot { font-size: .88rem; color: #555555; }
 
-@media (max-width: 1009px) {
+@media (max-width: 1095px) {
   .mh {
     position: relative;
     align-items: flex-start;

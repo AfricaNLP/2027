@@ -13,19 +13,19 @@ commit, and GitHub Pages republishes.
 
 | File | Page |
 | --- | --- |
-| `home.html` | Home: news, about, at a glance, previous editions |
+| `home.html` | Home: news, about, at a glance, invited speakers, previous editions, organizers, student volunteers, sponsors, contact |
 | `index.html` | Redirect to `home`, so the bare directory URL works |
 | `cfp.html` | Call for papers |
 | `dates.html` | Important dates |
-| `speakers.html` | Invited speakers |
+| `speakers.html` | Redirect to the Invited speakers section of `home` |
 | `shared-task.html` | Shared task |
 | `mentorship.html` | Mentorship and participation support |
 | `attending.html` | Registration, visas, joining remotely |
-| `organizers.html` | Organizers |
+| `organizers.html` | Redirect to the Organizers section of `home` |
 | `committee.html` | Programme committee |
-| `volunteers.html` | Student volunteers |
-| `sponsors.html` | Sponsors |
-| `contact.html` | Contact |
+| `volunteers.html` | Redirect to the Student volunteers section of `home` |
+| `sponsors.html` | Redirect to the Sponsors section of `home` |
+| `contact.html` | Redirect to the Contact section of `home` |
 
 Shared files: `styles.css`, `assets/band.webp` (the header frieze),
 `assets/people/` (organizer photos), `assets/logo.webp`, `favicon.png`.

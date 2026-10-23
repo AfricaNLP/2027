@@ -13,7 +13,7 @@ commit, and GitHub Pages republishes.
 
 | File | Page |
 | --- | --- |
-| `home.html` | Home: news, about, at a glance, invited speakers, previous editions, organizers, student volunteers, sponsors, contact |
+| `home.html` | Home: news, about, at a glance, invited speakers, previous editions, organizers, advisors, student volunteers, sponsors, contact |
 | `index.html` | Redirect to `home`, so the bare directory URL works |
 | `cfp.html` | Call for papers |
 | `dates.html` | Important dates |

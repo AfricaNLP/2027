@@ -405,6 +405,54 @@ table.data { display: table; width: 100%; margin: 0; font-size: .92rem; }
   .tasks { grid-template-columns: 1fr; }
 }
 
+/* shared task dates: one box, a bullet per date */
+.datebox {
+  max-width: 40rem;
+  margin: .4rem 0 1rem;
+  padding: .3rem 1.1rem;
+  background: #fbf8f2;
+  border: 1px solid #e3dccf;
+  border-top: 4px solid #c9892a;
+}
+.dlist { list-style: none; padding: 0; margin: 0; }
+.dlist li {
+  display: grid;
+  grid-template-columns: .5rem minmax(0, 1fr) auto;
+  column-gap: .8rem;
+  align-items: baseline;
+  margin: 0;
+  padding: .6rem 0;
+  border-bottom: 1px dashed #e3dccf;
+}
+.dlist li:last-child { border-bottom: 0; }
+/* the bullet */
+.dlist li::before {
+  content: "";
+  align-self: start;
+  margin-top: .52rem;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background: #c9892a;
+}
+.dl-note { display: block; font-size: .8rem; color: #555555; }
+.dl-when {
+  font-weight: bold;
+  color: #8a5a12;
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+/* the workshop itself */
+.dl-main > .dl-what { font-weight: bold; }
+.dl-main .dl-note { font-weight: normal; }
+.dlist .dl-main::before { width: .65rem; height: .65rem; margin-top: .45rem; background: #8a5a12; }
+
+@media (max-width: 480px) {
+  .dlist li { grid-template-columns: .5rem minmax(0, 1fr); }
+  .dl-when { grid-column: 2; text-align: left; margin-top: .1rem; }
+}
+
 @media (max-width: 994px) {
   .mh {
     position: relative;

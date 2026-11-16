@@ -319,6 +319,52 @@ table.data { display: table; width: 100%; margin: 0; font-size: .92rem; }
 
 .prizes { max-width: 22rem; }
 
+/* task boxes */
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 54rem;
+  margin: 0 0 1.2rem;
+}
+.task {
+  display: flex;
+  flex-direction: column;
+  padding: .9rem 1.1rem 1rem;
+  background: #fbf8f2;
+  border: 1px solid #e3dccf;
+  border-top: 4px solid #c9892a;
+}
+.task-n {
+  margin: 0 0 .15rem;
+  font-size: .75rem;
+  font-weight: bold;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #8a5a12;
+}
+.task h4 {
+  margin: 0 0 .6rem;
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+.task p { font-size: .95rem; margin-bottom: .9rem; }
+.io {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: .3rem .8rem;
+  margin: auto 0 0;
+  padding-top: .7rem;
+  border-top: 1px solid #e3dccf;
+  font-size: .88rem;
+}
+.io dt { font-weight: bold; color: #555555; }
+.io dd { margin: 0; }
+
+@media (max-width: 700px) {
+  .tasks { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 994px) {
   .mh {
     position: relative;

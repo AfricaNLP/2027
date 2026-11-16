@@ -101,11 +101,19 @@ One day, hybrid<br>
 <h3 id="rules">Model constraints</h3>
 
 <ul>
-<li>Systems must be built on <strong>openly available small LLMs</strong>. The exact parameter limit (e.g. &le; 8B) will be announced with the official call.</li>
+<li>Systems must be built on <strong>openly available small LLMs</strong> with <strong>at most 5B parameters</strong> (&le; 5B).</li>
 <li>Any training data may be used if it is documented. The AfriGuard test split must not be used for training.</li>
-<li>External guardrail models or closed APIs may not be used at inference time. The submitted model must itself be the safety mechanism.</li>
 <li>System papers should report model size, training data and compute used.</li>
 </ul>
+
+<div class="rulebox">
+<p class="rule-h">Strict rules</p>
+<ul>
+<li><strong>Generative models only.</strong> Systems must be built on generative LLMs (decoder-only or encoder-decoder). Encoder-only models, such as BERT, XLM-R or AfroXLMR, will not be accepted.</li>
+<li><strong>No external safety components.</strong> External guardrail models, safety classifiers and closed APIs may not be used at inference time. The submitted model must itself be the safety mechanism.</li>
+</ul>
+<p>Submissions that break either rule will not be accepted.</p>
+</div>
 
 <h3 id="data">Data</h3>
 
@@ -174,12 +182,15 @@ score = f1_score(gold_labels, predictions, average="weighted")</code></pre>
 
 <p>The Codabench leaderboard is for guidance only. The <strong>final ranking is based on our verified leaderboard</strong>, where organizers re-run each team's submitted model on the test set to reproduce its scores.</p>
 
-<p>At the end of the shared task, each team submits:</p>
+<p>After submitting final results on Codabench, each team <strong>must</strong> submit:</p>
 
 <ul>
-<li><strong>Their model</strong>: the final trained model (e.g. a Hugging Face model link) with the code or instructions needed to run it, so organizers can reproduce the reported scores on the test set.</li>
+<li><strong>Model:</strong> a link to the final trained model on <strong>Hugging Face</strong>.</li>
+<li><strong>Evaluation script:</strong> the code needed to run the model on the test set and reproduce the reported scores.</li>
 <li><strong>A system description paper</strong> covering the approach, training data, model size and per-language results. Paper format details will be announced soon.</li>
 </ul>
+
+<p>Organizers use the model and evaluation script to reproduce each team's scores and to check that the system meets the <a href="#rules">model constraints</a>: a generative model of at most 5B parameters, with no external guardrails or closed APIs. A Codabench rank alone does not count. Teams whose scores cannot be reproduced, or whose model breaks the constraints, are not included in the verified leaderboard.</p>
 <h3 id="prizes">Prizes</h3>
 
 <p>Cash prizes will be awarded to the <strong>three best systems</strong>, judged on the system description paper, results on the verified leaderboard, and the novelty of the approach.</p>

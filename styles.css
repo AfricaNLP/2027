@@ -405,6 +405,27 @@ table.data { display: table; width: 100%; margin: 0; font-size: .92rem; }
   .tasks { grid-template-columns: 1fr; }
 }
 
+/* strict rules callout */
+.rulebox {
+  max-width: 54rem;
+  margin: 0 0 1.2rem;
+  padding: .8rem 1.1rem .9rem;
+  background: #fbf1ee;
+  border: 1px solid #ecd2c9;
+  border-left: 4px solid #b3412a;
+}
+.rulebox .rule-h {
+  margin: 0 0 .4rem;
+  font-size: .75rem;
+  font-weight: bold;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #8f2f1c;
+}
+.rulebox ul { margin: 0 0 .5rem; }
+.rulebox li { margin-bottom: .35rem; }
+.rulebox p:last-child { margin: 0; font-size: .92rem; font-weight: bold; color: #8f2f1c; }
+
 /* shared task dates: one box, a bullet per date */
 .datebox {
   max-width: 40rem;

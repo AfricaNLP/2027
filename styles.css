@@ -317,7 +317,47 @@ table.data { display: table; width: 100%; margin: 0; font-size: .92rem; }
 }
 .cats li { break-inside: avoid; }
 
-.prizes { max-width: 22rem; }
+/* prize boxes: gold, silver, bronze */
+.prizes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 40rem;
+  margin: 0 0 1.2rem;
+}
+.prize {
+  padding: .9rem .8rem 1rem;
+  text-align: center;
+  background: #fbf8f2;
+  border: 1px solid #e3dccf;
+  border-top: 4px solid #c9892a;
+}
+.prize p { margin: 0; }
+.prize-n {
+  font-size: .75rem;
+  font-weight: bold;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #8a5a12;
+}
+.prize .prize-amt {
+  margin-top: .35rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.prize-cur { font-size: .85rem; color: #555555; }
+.p1 { background: #fbf1dc; border-color: #e6cf9f; border-top-color: #c9892a; }
+.p2 { border-top-color: #9a9a9a; }
+.p2 .prize-n { color: #555555; }
+.p3 { border-top-color: #a8683a; }
+.p3 .prize-n { color: #7a4520; }
+
+@media (max-width: 420px) {
+  .prizes { gap: .6rem; }
+  .prize .prize-amt { font-size: 1.45rem; }
+}
 
 /* task boxes */
 .tasks {

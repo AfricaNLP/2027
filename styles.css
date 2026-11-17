@@ -565,29 +565,34 @@ table.data { display: table; width: 100%; margin: 0; font-size: .92rem; }
 
 /* submission call-out on the home page */
 .cta {
-  max-width: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem 1.5rem;
+  max-width: 54rem;
   margin: 1.2rem 0 1.6rem;
-  padding: 1rem 1.2rem 1.1rem;
+  padding: 1rem 1.2rem;
   background: #fbf1dc;
   border: 1px solid #e6cf9f;
   border-left: 6px solid #c9892a;
 }
-.cta p { margin: 0 0 .6rem; }
-.cta .cta-h {
-  font-size: 1.35rem;
-  font-weight: bold;
+.cta .cta-t { margin: 0; }
+.cta .cta-t b {
+  display: block;
+  font-size: 1.3rem;
   line-height: 1.2;
   color: #8a5a12;
 }
-.cta .cta-d { font-size: 1.05rem; }
+.cta .cta-t span { font-size: 1rem; }
 .cta-btn, .cta-btn:visited {
   display: inline-block;
-  padding: .55rem 1.1rem;
+  padding: .6rem 1.2rem;
   background: #8a5a12;
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
   border-radius: 4px;
+  white-space: nowrap;
 }
 .cta-btn:hover, .cta-btn:focus { background: #6e470e; color: #ffffff; }
-.cta .cta-n { margin: 0; font-size: .9rem; color: #555555; }

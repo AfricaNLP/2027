@@ -58,7 +58,7 @@ One day, hybrid<br>
 
 <p class="st-sub">Improving the safety and robust refusal of small LLMs for African languages. The task covers 10 African languages and English, with culturally grounded scenarios.</p>
 
-<p class="st-links"><a href="https://www.codabench.org/">Shared task on Codabench</a> &middot; <a href="https://arxiv.org/abs/2610.26474">Paper (arXiv)</a> &middot; <a href="https://arxiv.org/pdf/2610.26474">Paper (PDF)</a></p>
+<p class="st-links"><a href="https://www.codabench.org/competitions/18627/">Shared task on Codabench</a> &middot; <a href="https://arxiv.org/abs/2610.26474">Paper (arXiv)</a> &middot; <a href="https://arxiv.org/pdf/2610.26474">Paper (PDF)</a></p>
 
 <p class="toc">On this page: <a href="#overview">Overview</a> &middot; <a href="#tasks">Tasks</a> &middot; <a href="#rules">Model constraints</a> &middot; <a href="#data">Data</a> &middot; <a href="#categories">Safety categories</a> &middot; <a href="#evaluation">Evaluation</a> &middot; <a href="#submission">Submission</a> &middot; <a href="#prizes">Prizes</a> &middot; <a href="#st-dates">Dates</a> &middot; <a href="#st-organizers">Organizers</a> &middot; <a href="#citation">Citation</a></p>
 
@@ -110,7 +110,7 @@ One day, hybrid<br>
 <p class="rule-h">Strict rules</p>
 <ul>
 <li><strong>Generative models only.</strong> Systems must be built on generative LLMs (decoder-only or encoder-decoder). Encoder-only models, such as BERT, XLM-R or AfroXLMR, will not be accepted.</li>
-<li><strong>No external safety components.</strong> External guardrail models, safety classifiers and closed APIs may not be used at inference time. The submitted model must itself be the safety mechanism.</li>
+<li><strong>No external safety components.</strong> External guardrail models, safety classifiers and closed APIs may not be used at inference time. </li>
 </ul>
 <p>Submissions that break either rule will not be accepted.</p>
 </div>
@@ -142,7 +142,7 @@ One day, hybrid<br>
 
 <p>The test split contains only <strong>unseen scenarios</strong>, with no cross-language train/test leakage. Each row contains <code>id</code>, <code>scenario_id</code>, <code>scenario</code>, <code>country</code>, <code>target_language</code>, <code>prompt</code>, <code>response</code>, <code>prompt_translated</code>, <code>response_translated</code>, <code>class</code> and <code>safe_unsafe</code>.</p>
 
-<p>Task data (train, validation and test splits) is distributed through the shared task on <a href="https://www.codabench.org/">Codabench</a>. The dataset is licensed CC-BY-4.0.</p>
+<p>Task data (train, validation and test splits) is distributed through the shared task on <a href="https://www.codabench.org/competitions/18627/">Codabench</a>. The dataset is licensed CC-BY-4.0.</p>
 
 <h3 id="categories">Safety categories</h3>
 
@@ -174,11 +174,11 @@ One day, hybrid<br>
 
 score = f1_score(gold_labels, predictions, average="weighted")</code></pre>
 
-<p>Scores are reported per language and averaged over all ten languages. The official ranking uses the held-out test split and is published on the verified leaderboard (see <a href="#submission">Submission</a>). Evaluation scripts will be released soon.</p>
+<p>Scores are reported per language and averaged over all ten languages. The official ranking uses the held-out test split and is published on the verified leaderboard (see <a href="#submission">Submission</a>). You can find starter training and evaluation scripts in the <a href="https://colab.research.google.com/drive/1hpclCRZCmKrYSth1t3Zx7cdLBLOXf5Yn?usp=sharing">Starter Kit</a>.</p>
 
 <h3 id="submission">Submission</h3>
 
-<p>The shared task is hosted on <a href="https://www.codabench.org/"><strong>Codabench</strong></a>. Participants submit their predictions for each task there and results appear on the leaderboard.</p>
+<p>The shared task is hosted on <a href="https://www.codabench.org/competitions/18627/"><strong>Codabench</strong></a>. Participants submit their predictions for each task there and results appear on the leaderboard.</p>
 
 <p>The Codabench leaderboard is for guidance only. The <strong>final ranking is based on our verified leaderboard</strong>, where organizers re-run each team's submitted model on the test set to reproduce its scores.</p>
 
@@ -186,11 +186,11 @@ score = f1_score(gold_labels, predictions, average="weighted")</code></pre>
 
 <ul>
 <li><strong>Model:</strong> a link to the final trained model on <strong>Hugging Face</strong>.</li>
-<li><strong>Evaluation script:</strong> the code needed to run the model on the test set and reproduce the reported scores.</li>
+<!-- <li><strong>Evaluation script:</strong> the code needed to run the model on the test set and reproduce the reported scores.</li> -->
 <li><strong>A system description paper</strong> covering the approach, training data, model size and per-language results. Paper format details will be announced soon.</li>
 </ul>
 
-<p>Organizers use the model and evaluation script to reproduce each team's scores and to check that the system meets the <a href="#rules">model constraints</a>: a generative model of at most 5B parameters, with no external guardrails or closed APIs. A Codabench rank alone does not count. Teams whose scores cannot be reproduced, or whose model breaks the constraints, are not included in the verified leaderboard.</p>
+<p>Organizers use the model to reproduce each team's scores and to check that the system meets the <a href="#rules">model constraints</a>: a generative model of at most 5B parameters, with no external guardrails or closed APIs. A Codabench rank alone does not count. Teams whose scores cannot be reproduced, or whose model breaks the constraints, are not included in the verified leaderboard.</p>
 <h3 id="prizes">Prizes</h3>
 
 <p>Cash prizes will be awarded to the <strong>three best systems</strong><sup>*</sup>, judged on the system description paper, results on the verified leaderboard, and the novelty of the approach.</p>
@@ -207,7 +207,7 @@ score = f1_score(gold_labels, predictions, average="weighted")</code></pre>
 
 <div class="datebox">
 <ul class="dlist">
-<li><span class="dl-what">Final result submission <span class="dl-note">on <a href="https://www.codabench.org/">Codabench</a></span></span><span class="dl-when">5 January 2027</span></li>
+<li><span class="dl-what">Final result submission <span class="dl-note">on <a href="https://www.codabench.org/competitions/18627/">Codabench</a></span></span><span class="dl-when">5 January 2027</span></li>
 <li><span class="dl-what">System paper submission deadline</span><span class="dl-when">10 January 2027</span></li>
 <li><span class="dl-what">Notification of acceptance</span><span class="dl-when">15 January 2027</span></li>
 <li><span class="dl-what">Camera-ready</span><span class="dl-when">18 January 2027</span></li>

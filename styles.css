@@ -563,36 +563,12 @@ table.data { display: table; width: 100%; margin: 0; font-size: .92rem; }
   .dates tr { border-bottom: 1px solid #dddddd; padding: .35rem 0; }
 }
 
-/* submission call-out on the home page */
+/* submission line on the home page */
 .cta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: .8rem 1.5rem;
   max-width: 54rem;
-  margin: 1.2rem 0 1.6rem;
-  padding: 1rem 1.2rem;
-  background: #fbf1dc;
-  border: 1px solid #e6cf9f;
-  border-left: 6px solid #c9892a;
+  margin: 1.2rem 0 1.4rem;
+  padding: .7rem 0;
+  font-size: 1.1rem;
+  border-top: 1px solid #e3dccf;
+  border-bottom: 1px solid #e3dccf;
 }
-.cta .cta-t { margin: 0; }
-.cta .cta-t b {
-  display: block;
-  font-size: 1.3rem;
-  line-height: 1.2;
-  color: #8a5a12;
-}
-.cta .cta-t span { font-size: 1rem; }
-.cta-btn, .cta-btn:visited {
-  display: inline-block;
-  padding: .6rem 1.2rem;
-  background: #8a5a12;
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 4px;
-  white-space: nowrap;
-}
-.cta-btn:hover, .cta-btn:focus { background: #6e470e; color: #ffffff; }

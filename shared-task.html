@@ -68,7 +68,7 @@ One day, hybrid<br>
 
 <p>AfriGuard is a culturally grounded multilingual dataset for studying harmful intent, safety-category understanding, and refusal behavior across <strong>Amharic, Hausa, Igbo, Oromo, Shona, Swahili, Twi, Wolof, Yor&ugrave;b&aacute; and isiZulu</strong>. In the AfriGuard paper, guardrail models underperform both open- and closed-source LLMs. Models also score below 60% F1 on understanding appropriate safety behavior.</p>
 
-<p>This shared task asks participants to <strong>improve small LLMs</strong> so they refuse harmful requests robustly in African languages without over-refusing safe ones. Fine-tuning, preference optimization, data augmentation, translation, prompting, activation steering and other techniques are all welcome.</p>
+<p>This shared task asks participants to <strong>improve small LMs</strong> so they refuse harmful requests robustly in African languages without over-refusing safe ones. Fine-tuning, preference optimization, data augmentation, translation, prompting, activation steering and other techniques are all welcome.</p>
 
 <h3 id="tasks">Tasks</h3>
 
@@ -96,7 +96,7 @@ One day, hybrid<br>
 
 </div>
 
-<p>Participants may enter any task, for one or more languages.</p>
+<p>Participants may enter any task, for one or more languages. We encourage participation in multiple tasks and languages.</p>
 
 <h3 id="rules">Model constraints</h3>
 
@@ -115,10 +115,10 @@ One day, hybrid<br>
 <p>Submissions that break either rule will not be accepted.</p>
 </div>
 
-<h3 id="data">Data</h3>
-
-<p>Data is created with a five-stage pipeline: taxonomy construction, country-specific scenario generation, safe/unsafe prompt generation, response generation, and translation. Native-speaker human verification is carried out between stages.</p>
-
+<h3 id="data">Languages</h3>
+We include ten African languages from different language families, such as Amharic, Hausa, Igbo, Oromo, Shona, Swahili, Twi, Wolof, Yorùbá and isiZulu. The languages are chosen to cover a range of African language families and regions.
+<!-- <p>Data is created with a five-stage pipeline: taxonomy construction, country-specific scenario generation, safe/unsafe prompt generation, response generation, and translation. Native-speaker human verification is carried out between stages.</p> -->
+<!-- 
 <div class="data-wrap">
 <table class="data">
 <thead>
@@ -138,11 +138,12 @@ One day, hybrid<br>
 <tr><td>Zulu</td><td>976</td><td>20</td><td>998</td><td>250</td><td>20</td><td>250</td></tr>
 </tbody>
 </table>
-</div>
+</div> -->
 
-<p>The test split contains only <strong>unseen scenarios</strong>, with no cross-language train/test leakage. Each row contains <code>id</code>, <code>scenario_id</code>, <code>scenario</code>, <code>country</code>, <code>target_language</code>, <code>prompt</code>, <code>response</code>, <code>prompt_translated</code>, <code>response_translated</code>, <code>class</code> and <code>safe_unsafe</code>.</p>
+<!-- <p>The test split contains only <strong>unseen scenarios</strong>, with no cross-language train/test leakage. Each row contains <code>id</code>, <code>scenario_id</code>, <code>scenario</code>, <code>country</code>, <code>target_language</code>, <code>prompt</code>, <code>response</code>, <code>prompt_translated</code>, <code>response_translated</code>, <code>class</code> and <code>safe_unsafe</code>.</p> -->
 
-<p>Task data (train, validation and test splits) is distributed through the shared task on <a href="https://www.codabench.org/competitions/18627/">Codabench</a>. The dataset is licensed CC-BY-4.0.</p>
+<p>Task data (train, validation and test splits) is distributed through the shared task on <a href="https://www.codabench.org/competitions/18627/">Codabench</a>.
+       <!-- The dataset is licensed CC-BY-4.0.</p> -->
 
 <h3 id="categories">Safety categories</h3>
 
@@ -174,7 +175,7 @@ One day, hybrid<br>
 
 score = f1_score(gold_labels, predictions, average="weighted")</code></pre>
 
-<p>Scores are reported per language and averaged over all ten languages. The official ranking uses the held-out test split and is published on the verified leaderboard (see <a href="#submission">Submission</a>). You can find starter training and evaluation scripts in the <a href="https://colab.research.google.com/drive/1hpclCRZCmKrYSth1t3Zx7cdLBLOXf5Yn?usp=sharing">Starter Kit</a>.</p>
+<p>Scores are reported per language and averaged over all ten languages. The official ranking uses the held-out test split and is published on the verified leaderboard (see <a href="#submission">Submission</a>). You can use  <a href="https://colab.research.google.com/drive/1pvvGCm113GfuouzjAktq_hdrWEd4SHuq?usp=sharing">this Starter Notebook to get started</a>.</p>
 
 <h3 id="submission">Submission</h3>
 
@@ -207,10 +208,11 @@ score = f1_score(gold_labels, predictions, average="weighted")</code></pre>
 
 <div class="datebox">
 <ul class="dlist">
-<li><span class="dl-what">Final result submission <span class="dl-note">on <a href="https://www.codabench.org/competitions/18627/">Codabench</a></span></span><span class="dl-when">5 January 2027</span></li>
-<li><span class="dl-what">System paper submission deadline</span><span class="dl-when">10 January 2027</span></li>
-<li><span class="dl-what">Notification of acceptance</span><span class="dl-when">15 January 2027</span></li>
-<li><span class="dl-what">Camera-ready</span><span class="dl-when">18 January 2027</span></li>
+<li><span class="dl-what">Dev Phase</span><span class="dl-note">on <a href="https://www.codabench.org/competitions/18627/">Codabench</a></span></span><span class="dl-when">November 18, 2026 - December 23, 2026</span></li>
+<li><span class="dl-what">Test Phase <span class="dl-note">on <a href="https://www.codabench.org/competitions/18627/">Codabench</a></span></span><span class="dl-when">December 24, 2026 - January 5, 2027</span></li>
+<li><span class="dl-what">System paper submission deadline</span><span class="dl-when">January 10, 2027</span></li>
+<li><span class="dl-what">Notification of acceptance</span><span class="dl-when">January 15, 2027</span></li>
+<li><span class="dl-what">Camera-ready</span><span class="dl-when">January 17, 2027</span></li>
 <li class="dl-main"><span class="dl-what">Workshop <span class="dl-note">EACL 2027, Athens &middot; day to be announced</span></span><span class="dl-when">9&ndash;14 March 2027</span></li>
 </ul>
 </div>
